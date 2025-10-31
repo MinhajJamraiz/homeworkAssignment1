@@ -70,3 +70,15 @@ Assigned task T-0 to robot 1
 Executed Task T-0
 Assigned task T-1 to robot 1
 Executed Task T-1
+Created task T-0 LOAD FR-5000 at 1
+Created task T-1 UNLOAD FR-102-2 for 2
+Assigned task T-0 to robot 1
+Executed Task T-0
+Assigned task T-1 to robot 1
+Executed Task T-1
+Created task T-0 LOAD FR-5000 at 1
+Created task T-1 UNLOAD FR-102-2 for 2
+Assigned task T-0 to robot 1
+Executed Task T-0
+Assigned task T-1 to robot 1
+Executed Task T-1
