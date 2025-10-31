@@ -3,10 +3,13 @@ import java.util.*;
 abstract class StorageManager {
     List<StorageRack> racks; //list of racks
     Map<Parcel, Location> parcelLocations; // Map to track every parcel locations
+    public LogManager log_manager;
     // Constructor
     StorageManager() {
         racks = new ArrayList<>();
         parcelLocations = new HashMap<>();
+        log_manager = new LogManager();
+        log_manager.CreateLogFile("Storage");
     }
 
     // Abstract Methods, will be implemented in subclasses
@@ -34,7 +37,7 @@ class WarehouseStorageManager extends StorageManager {
             System.out.println(message);
         
             //log file entry
-            LogManager.writeLog(message);
+            log_manager.writeLog(message);
         
         } else {
             System.out.println("No empty slots available to store the parcel.");
@@ -58,7 +61,7 @@ class WarehouseStorageManager extends StorageManager {
                 System.out.println(message);
 
                 //log file entry
-                LogManager.writeLog(message);
+                log_manager.writeLog(message);
 
                 return p;
         

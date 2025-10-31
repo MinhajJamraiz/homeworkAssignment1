@@ -1,0 +1,6 @@
+Parcel P1 stored in Rack R1 at slot R1-S0
+Parcel P2 stored in Rack R1 at slot R1-S1
+Parcel P1 retrieved from Rack R1 from Slot R1-S0
+Parcel P1 stored in Rack R1 at slot R1-S0
+Parcel P2 stored in Rack R1 at slot R1-S1
+Parcel P1 retrieved from Rack R1 from Slot R1-S0
