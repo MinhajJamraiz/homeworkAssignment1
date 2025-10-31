@@ -32,21 +32,30 @@ public class Main {
         task_manager.createUnLoadTask(2);
         task_manager.processPendingTasks();
 
-        //read today's log
-        //LogManager.readLog("2025-10-29");
         LogManager Reading_log;
         Reading_log = new LogManager();
-        Reading_log.createLogFolder();
-        Reading_log.readLogBytes("2025-10-29");
+        
+        
+        
+        //read today's log
+        //LogManager.readLog("2025-10-31");
+        // Reading_log.createLogFolder();
+        // Reading_log.readLogBytes("2025-10-31");
+
+
         // List all Task logs
-        Reading_log.listFilesByPattern("Task_.*\\.txt");
+        // Reading_log.listFilesByPattern("Task_.*\\.txt");
 
         // List all logs
-        Reading_log.listFilesByPattern(".*\\.txt");
-        //delete today's log
-        // LogManager.deleteLog("2025-10-29");
-        // String today =(LocalTime.now().toString());
-        // LogManager.writeLog("System Started");
-        // LogManager.readLog(today);
+        // Reading_log.listFilesByPattern(".*\\.txt");
+
+
+        // delete today's log
+        // LogManager.deleteLog("2025-10-31", "Storage");
+
+
+
+        // Archive Log
+        // LogManager.archiveLog("2025-10-31", "Storage");
     }
 }

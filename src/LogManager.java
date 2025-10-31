@@ -91,9 +91,9 @@ public  void readLogBytes(String date) {
         }
     }
     //delete log file
-    public static void deleteLog(String date) {
+    public static void deleteLog(String date , String type) {
         // use pattern
-        String filename = LOG_FOLDER + "/log_" + date + ".txt";
+        String filename = LOG_FOLDER + "/"+type+"_" + date + ".txt";
         File file = new File(filename);
         if (file.delete()) {
             System.out.println("Log file deleted ");
@@ -103,14 +103,16 @@ public  void readLogBytes(String date) {
     }
 
     //move log file to archive folder
-    public static void archiveLog(String date) {
+    public static void archiveLog(String date , String type) {
         // Use pattern
-        String filename = LOG_FOLDER + "/log_" + date + ".txt";
+        String filename = LOG_FOLDER + "/"+type+"_" + date + ".txt";
         File oldFile = new File(filename);
         File archiveFolder = new File(LOG_FOLDER + "/archive");
             archiveFolder.mkdir(); // create archive folder if not present
         
-        File newFile = new File(archiveFolder, "log_" + date + ".txt");
+        File newFile = new File(archiveFolder,type+"_" + date + ".txt");
+        System.out.println(oldFile);
+        System.out.println(newFile);
         if (oldFile.renameTo(newFile)) {
             System.out.println("Log file archived successfully.");
         } else {
